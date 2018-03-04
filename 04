@@ -1,0 +1,4 @@
+if [$(find /etc/crontab -mtime -1)]
+then
+	(crontab -l; echo "0 0 * * * mail -s 'file modified' root") | crontab
+fi
