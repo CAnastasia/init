@@ -1,0 +1,10 @@
+dirs=$1
+IFS=$'\n'
+for dir in $dirs
+do
+	echo "Directory: $dir"
+	for filename in $(ls $dir)
+	do
+		echo $filename
+	 done
+done
