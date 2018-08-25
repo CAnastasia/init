@@ -1,1 +1,0 @@
-du /var -a -h --max-depth=1 | sort -hr
