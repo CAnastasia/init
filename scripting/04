@@ -1,0 +1,7 @@
+#!/bin/bash]
+if [! -f "/etc/crontab.md5" ] ; then
+	md5sum /etc/crontab > /etc/contab.md5
+elif [ "$(md5sum /etc/crontab)" != "$(cat /etc/crontab.md5)" ] ;  then
+echo "file modified" | sendmail -bv "Le fichier a ete modifie" root
+$(md5sum /etc/crontab > /etc/crontab.md5)
+fi

@@ -1,0 +1,2 @@
+nmap -sV 10.51.1.253 -A
+web server

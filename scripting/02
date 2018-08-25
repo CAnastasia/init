@@ -1,0 +1,2 @@
+#!/bin/bash
+(crontab -l ; echo "0 4 * * sun    sudo apt-get update -y  >> var/log/update_script.log && sudo apt-get upgrade -y  >> /var/log/update_script.log") | crontab
